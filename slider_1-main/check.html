@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .slideshow-container {
+            max-width: 300px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 200px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .slide:first-child {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+    <div class="slide">Slide 1</div>
+    <div class="slide">Slide 2</div>
+    <div class="slide">Slide 3</div>
+    <!-- Add more slides as needed -->
+</div>
+
+<script>
+    // Function to show slides in a loop
+    function showSlides() {
+        var slides = document.getElementsByClassName('slide');
+        var currentSlideIndex = 0;
+
+        // Hide all slides
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+
+        // Show the current slide
+        slides[currentSlideIndex].style.display = 'block';
+
+        // Increment the slide index for the next iteration
+        currentSlideIndex++;
+
+        // Reset to the first slide if at the end
+        if (currentSlideIndex >= slides.length) {
+            currentSlideIndex = 0;
+        }
+    }
+
+    // Set interval to change slides every 3 seconds (3000 milli

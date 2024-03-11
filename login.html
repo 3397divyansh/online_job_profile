@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+        
+    </style> -->
+    <link rel="stylesheet" href="login.css">
+    <style media="screen">
+        *,
+  *:before,
+  *:after{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+ 
+   
+  form{
+      height: 520px;
+      width: 400px;
+      background-color: rgba(255,255,255,0.13);
+      position: absolute;
+      transform: translate(-10%,-50%);
+      top: 50%;
+      left: 50%;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+
+      border: 2px solid rgba(255,255,255,0.1);
+      box-shadow: 0 0 40px rgba(8,7,16,0.6);
+      padding: 50px 35px;
+  }
+  form *{
+      font-family: 'Poppins',sans-serif;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      outline: none;
+      border: none;
+  }
+  form h3{
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 42px;
+      text-align: center;
+      color: #7f5539;
+  }
+  
+  label{
+      display: block;
+      margin-top: 30px;
+      font-size: 16px;
+      font-weight: 500;
+  }
+  input{
+      display: block;
+      height: 50px;
+      width: 100%;
+      background-color: rgba(47, 41, 41, 0.07);
+      border-radius: 10px;
+      padding: 0 10px;
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 300;
+  }
+  ::placeholder{
+      color: #e5e5e5;
+      color: #7f5539;
+  }
+  button{
+      margin-top: 50px;
+      width: 100%;
+      background-color: #ffffff;
+      background-color: #7f5539;
+      color: white;
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  .social{
+    margin-top: 30px;
+    display: flex;
+    
+  }
+  .social div{
+    background: red;
+   
+    width: 150px;
+    border-radius: 10px;
+    padding: 5px 10px 10px 5px;
+    background-color: rgba(255,255,255,0.27);
+    color: #eaf0fb;
+    text-align: center;
+    background-color: #7f5539;
+  }
+  .social div:hover{
+    color: #7f5539;
+    background-color: rgba(255,255,255,0.47);
+    cursor:pointer ;
+  }
+  .social .fb{
+    margin-left: 25px;
+  }
+  .social i{
+    margin-right: 4px;
+  }
+  
+      </style>
+</head>
+
+
+
+
+<script >
+     
+    function displayUserData() {
+      // Get user data from local storage
+      var userData = JSON.parse(localStorage.getItem('userData'));
+      console.log(userData)
+
+      // Display user data on the profile page
+      document.getElementById("txt").innerText = userData.firstName  ;
+      document.getElementById("email1").innerText = userData.email;
+  }
+  
+  window.onload = displayUserData;</script>
+<body>
+
+
+<div class="main">
+    <div class="sidebar">
+
+        <h1 class="logo">Jobs</h1>
+
+        <div class="menus">
+
+            <a href="index1.html"><ion-icon name="home-outline"></ion-icon> Home</a>
+            <a href="index.html"><ion-icon name="newspaper-outline"></ion-icon> Find Jobs</a>
+            <a href="#"><ion-icon name="stats-chart-outline"></ion-icon> Performance</a>
+            <a href="bookmark.html"><ion-icon name="bookmarks-outline"></ion-icon> Bookmarks</a>
+            <a href="#"><ion-icon name="mail-unread-outline"></ion-icon> Message</a>
+            <a href="login.html"><ion-icon name="settings-outline"></ion-icon>Login</a>
+
+        </div>
+
+
+      <div class="profile">
+
+            <img class="profile-img" src="images/profile.jpeg">
+
+            <div class="profile-name">
+
+                <h4><span id="txt"></span></h4>
+                <!-- <p><b>Name: </b><span id="txt"></span></p> -->
+
+                <p>Data Science</p>
+
+            </div>
+ </a> 
+
+        </div>
+
+    </div>
+
+    <!-- <div class="login-container">
+        <h2>Login</h2>
+        <form id="form2" class="login-form">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div> -->
+
+    
+    <form id="form2">
+        <h3>Login Here</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password">
+
+        <button type="submit">Log In</button>
+        <div class="social">
+          <div class="go"><i class="fab fa-google"></i>  Google</div>
+          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+        </div>
+    </form>
+
+</div>
+
+ 
+ 
+ 
+
+
+
+
+     
+
+</body>
+<script src="script.js"></script>
+<script>
+    function handleSubmit(event) {
+    event.preventDefault(); 
+
+    // Get form data
+    var firstName = document.getElementById("username").value;
+    var lastName = document.getElementById("username").value;
+    var email = document.getElementById("password").value;
+
+    var userData = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email
+    };
+
+console.log(userData);
+    localStorage.setItem('userData', JSON.stringify(userData));
+
+  }
+  document.getElementById("form2").addEventListener("submit", handleSubmit);
+</script>
+</html>

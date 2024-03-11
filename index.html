@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job portal</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+  
+        
+</head>
+
+
+<body>
+
+
+
+
+    <div class="sidebar" >
+
+        <h1 class="logo">Jobs</h1>
+
+        <div class="menus">
+
+            <a href="index1.html"><ion-icon name="home-outline"></ion-icon> Home</a>
+            <a href="index.html"><ion-icon name="newspaper-outline"></ion-icon> Find Jobs</a>
+            <a href="#"><ion-icon name="stats-chart-outline"></ion-icon> Performance</a>
+            <a href="bookmark.html"><ion-icon name="bookmarks-outline"></ion-icon> Bookmarks</a>
+            <a href="#"><ion-icon name="mail-unread-outline"></ion-icon> Message</a>
+            <a href="login.html"><ion-icon name="settings-outline"></ion-icon>Login</a>
+
+        </div>
+
+
+      <div class="profile">
+
+            <img class="profile-img" src="images/profile.jpeg">
+
+            <div class="profile-name">
+
+                <h4><span id="txt"></span></h4>
+                <!-- <p><b>Name: </b><span id="txt"></span></p> -->
+
+                <p>Data Science</p>
+
+            </div>
+ </a> 
+
+        </div>
+
+    </div>
+
+
+
+    
+
+    <div class="main">
+
+        <div class="main-header">
+            <div></div>
+            <div class="search" style="border-radius: 10%"> 
+            <ion-icon class="menu-bar" name="menu-outline"></ion-icon>
+                <input type="text"  placeholder="Search your best job here...">  
+                <button class="btn-search"><ion-icon name="search-outline"></ion-icon></button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <div class="filter-wrapper">
+
+            <p>Recommendation</p>
+
+            <div class="filter">
+
+                <button class="btn-filter">Data Science</button>
+
+                <button class="btn-filter">Data Engineer</button>
+
+                <button class="btn-filter">Data Analyst</button>
+
+                <button class="btn-filter">Data Visualization</button>
+
+                <button class="btn-filter">CRM Analyst</button>
+
+            </div>
+
+        </div>
+
+
+        <div class="sort">
+
+            <p>Sort</p>
+
+            <div class="sort-list">
+
+                <select id="sortSelect">
+
+                    <option value="0">All</option>
+
+                    <option value="1">Highest Pay</option>
+
+                    <option value="2">Lowest Pay</option>
+
+                     
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="wrapper">
+
+            <div class="card"  
+            data-id="1content1"
+            onclick="toggleContent('content1')">
+
+                <div class="card-left blue-bg">
+
+                    <img src="images/google.jpeg">
+
+                </div>
+                <div class="card-center">
+
+                    <h3 class="jjpost">Google</h3>
+
+                    <p class="card-detail">Data Science, Data Engineer</p>
+
+                    <p class="card-loc"><ion-icon name="location-outline"></ion-icon> Abcd street</p>
+
+                    <div class="card-sub">
+
+                        <p><ion-icon name="today-outline"></ion-icon> 1 mins ago</p>
+
+                        <p><ion-icon name="hourglass-outline"></ion-icon> Full-time</p>
+
+                        <p><ion-icon name="people-outline"></ion-icon> 200 Applicants</p>
+
+                    </div>
+
+                </div>
+                <div class="card-right">
+
+                    <div class="card-tag">
+
+                        <h5>Division</h5>
+
+                        <a href="#">Data Engineer</a>
+
+                    </div>
+
+                    <div class="card-salary">
+
+                        <p><b>$350k</b> <span>/ year</span></p>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="bookmark-div">
+                <button class="book" onclick="bookmarkJob('1content1')">bookmark</button>
+            </div>
+
+            <div class="card"  data-id="2content2"onclick="toggleContent('content2')">
+
+                <div class="card-left yellow-bg">
+
+                    <img src="images/amazon.jpeg">
+
+                </div>
+                <div class="card-center">
+
+                    <h3 class="jjpost">Data Science</h3>
+
+                    <p class="card-detail">Data Analyst, Back-end Engineer</p>
+
+                    <p class="card-loc"><ion-icon name="location-outline"></ion-icon> Abcd street</p>
+
+                    <div class="card-sub">
+
+                        <p><ion-icon name="today-outline"></ion-icon> 2 days ago</p>
+
+                        <p><ion-icon name="hourglass-outline"></ion-icon> Full-time</p>
+
+                        <p><ion-icon name="people-outline"></ion-icon> 112 Applicants</p>
+
+                    </div>
+
+                </div>
+                <div class="card-right">
+
+                    <div class="card-tag">
+
+                        <h5>Division</h5>
+
+                        <a href="#">Software Eng</a>
+
+                    </div>
+
+                    <div class="card-salary">
+
+                        <p><b>$150k</b> <span>/ year</span></p>
+
+                    </div>
+                    
+
+                </div>
+            </div>
+            <div class="bookmark-div">
+                <button class="book" onclick="bookmarkJob('2content2')">bookmark</button>
+            </div>
+
+            <div class="card" data-id="3content3"onclick="toggleContent('content3')">
+
+                <div class="card-left yellow-bg">
+
+                    <img src="images/adobe.jpg">
+
+                </div>
+                <div class="card-center">
+
+                    <h3 class="jjpost">Data Analyst</h3>
+
+                    <p class="card-detail">Data Analyst, Back-end Engineer</p>
+
+                    <p class="card-loc"><ion-icon name="location-outline"></ion-icon> Abcd street</p>
+
+                    <div class="card-sub">
+
+                        <p><ion-icon name="today-outline"></ion-icon> 1 mins ago</p>
+
+                        <p><ion-icon name="hourglass-outline"></ion-icon> Full-time</p>
+
+                        <p><ion-icon name="people-outline"></ion-icon> 112 Applicants</p>
+
+                    </div>
+
+                </div>
+                <div class="card-right">
+
+                    <div class="card-tag">
+
+                        <h5>Division</h5>
+
+                        <a href="#">Data Engineer</a>
+
+                    </div>
+
+                    <div class="card-salary">
+
+                        <p><b>$150k</b> <span>/ year</span></p>
+
+
+                    </div>
+                     
+
+                </div>
+            </div>
+
+            <div class="bookmark-div">
+                <button class="book" onclick="bookmarkJob('3content3')">bookmark</button>
+            </div>
+            <div class="card" data-id="4content4" onclick="toggleContent('content4')">
+
+                <div class="card-left yellow-bg">
+
+                    <img src="images/asus.jpg">
+
+                </div>
+                <div class="card-center">
+
+                    <h3  class="jjpost">Data Engineer</h3>
+
+                    <p class="card-detail">Data Analyst, Back-end Engineer</p>
+
+                    <p class="card-loc"><ion-icon name="location-outline"></ion-icon> Abcd street</p>
+
+                    <div class="card-sub">
+
+                        <p><ion-icon name="today-outline"></ion-icon> 1 mins ago</p>
+
+                        <p><ion-icon name="hourglass-outline"></ion-icon> Full-time</p>
+
+                        <p><ion-icon name="people-outline"></ion-icon> 112 Applicants</p>
+
+                    </div>
+
+                </div>
+                <div class="card-right">
+
+                    <div class="card-tag">
+
+                        <h5>Division</h5>
+
+                        <a href="#">Data Engineer</a>
+
+                    </div>
+
+                    <div class="card-salary">
+
+                        <p><b>$150k</b> <span>/ year</span></p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="bookmark-div">
+                <button class="book" onclick="bookmarkJob('4content4')">bookmark</button>
+            </div>
+
+            <div class="card" data-id="5content5" onclick="toggleContent('content5')">
+
+                <div class="card-left yellow-bg">
+
+                    <img src="images/cisco.jpg">
+
+                </div>
+                <div class="card-center">
+
+                    <h3  class="jjpost">CRM Analyst</h3>
+
+                    <p class="card-detail">Data Analyst, Back-end Engineer</p>
+
+                    <p class="card-loc"><ion-icon name="location-outline"></ion-icon> Abcd street</p>
+
+                    <div class="card-sub">
+
+                        <p><ion-icon name="today-outline"></ion-icon> 10 mins ago</p>
+
+                        <p><ion-icon name="hourglass-outline"></ion-icon> Full-time</p>
+
+                        <p><ion-icon name="people-outline"></ion-icon> 12 Applicants</p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="card-right">
+
+                    <div class="card-tag">
+
+                        <h5>Division</h5>
+
+                        <a href="#">SDE 2</a>
+
+                    </div>
+
+                    <div class="card-salary">
+
+                        <p><b>$100k</b> <span>/ year</span></p>
+
+                    </div>
+                     
+
+                </div>
+            </div>
+            <div class="bookmark-div">
+                <button class="book" onclick="bookmarkJob('5content5')">bookmark</button>
+            </div>
+
+        </div>
+
+ 
+
+        
+ 
+
+  <footer class="footer">
+     <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">affiliate program</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">shipping</a></li>
+            <li><a href="#">returns</a></li>
+            <li><a href="#">order status</a></li>
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <!-- <div class="footer-col">
+          <h4>online shop</h4>
+          <ul>
+            <li><a href="#">watch</a></li>
+            <li><a href="#">bag</a></li>
+            <li><a href="#">shoes</a></li>
+            <li><a href="#">dress</a></li>
+          </ul>
+        </div> -->
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+     </div>
+  </footer>
+
+    </div>
+
+
+
+
+    <div class="slider" id="slider">
+
+<div>
+    <h1>Jobs</h1>
+</div>
+        <div class="menus">
+          <a href="index.html"
+            ><ion-icon name="home-outline"></ion-icon> Home</a
+          >
+          <a href="#cardwrapper"
+            ><ion-icon name="newspaper-outline"></ion-icon>find job</a
+          >
+          
+          <a href="#"><ion-icon name="grid-outline"></ion-icon> Feedback</a>
+          <a href="#"><ion-icon name="settings-outline"></ion-icon> Settings</a>
+        </div>
+        <div class="profile sliderprofile">
+          <img src="/images/profile.jpeg" alt="" class="profile-img" />
+          <div class="profile-name">
+            <a href="login/loginpg.html" class="loginlink"
+              ><h4 class="loginlink">divyanshsaini@gamil.com</h4></a
+            >
+          </div>
+        </div>
+
+        <span class="close-btn"  id="close-slider" style="color: black;">&times;</span>
+      </div>
+
+
+
+    <div class="detail" id="content1">
+
+        <ion-icon class="close-detail" name="close-detail"></ion-icon>
+
+        <div class="detail-header">
+
+            <img src="images/google.jpeg">
+
+            <h2>Google</h2>
+
+            <p>Data Science</p>
+        </div>
+        <hr class="divider">
+        <div class="detail-desc">
+
+            <div class="about">
+
+                <h4>About Company</h4>
+
+                <p>Google, a tech titan, revolutionizes the digital landscape with its innovative products and services, shaping the way we navigate information and connect online.
+
+
+
+
+
+                    <a href="#">Read more</a>
+
+            </div>
+
+            <hr class="divider">
+
+            <div class="qualification">
+
+                <h4>Qualification</h4>
+
+                <ul>
+
+                    <li>Technical Proficiency: </li>
+
+                    <li>Adaptability and Flexibility: </li>
+                    <li>Effective Communication </li>
+
+
+                </ul>
+
+            </div>
+
+            <hr class="divider">
+            <div class="detail-btn">
+
+                <button class="btn-apply">Apply Now</button>
+
+                <button class="btn-save" onclick="saveJob()">Save Job</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="detail"  id="content2" onclick=fun()>
+
+        <ion-icon class="close-detail" name="close-detail"></ion-icon>
+
+        <div class="detail-header">
+
+            <img src="images/amazon.jpeg">
+
+            <h2>AMAZON</h2>
+
+            <p>Data Science</p>
+        </div>
+        <hr class="divider">
+        <div class="detail-desc">
+
+            <div class="about">
+
+                <h4>About Company</h4>
+
+                <p>LGoogle, a tech titan, revolutionizes the digital landscape with its innovative products and services, shaping the way we navigate information and connect online.
+                    <a href="#">Read more</a>
+
+            </div>
+
+            <hr class="divider">
+
+            <div class="qualification">
+
+                <h4>Qualification</h4>
+
+                <ul>
+
+                    <li>Technical Proficiency: </li>
+
+                    <li>Adaptability and Flexibility: </li>
+                    <li>Effective Communication </li>
+
+                </ul>
+
+            </div>
+
+            <hr class="divider">
+            <div class="detail-btn">
+
+                <button class="btn-apply">Apply Now</button>
+
+                <button class="btn-save">Save Job</button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="detail"  id="content3" onclick=fun()>
+
+        <ion-icon class="close-detail" name="close-detail"></ion-icon>
+
+        <div class="detail-header">
+
+            <img src="images/adobe.jpg">
+
+            <h2>Adobe</h2>
+
+            <p>Data Science</p>
+        </div>
+        <hr class="divider">
+        <div class="detail-desc">
+
+            <div class="about">
+
+                <h4>About Company</h4>
+
+                <p>Adobe: Pioneering creativity software, Adobe empowers artists, designers, and businesses worldwide with its suite of industry-leading tools for digital media creation and marketing solutions.
+
+
+                    <a href="#">Read more</a>
+
+            </div>
+
+            <hr class="divider">
+
+            <div class="qualification">
+
+                <h4>Qualification</h4>
+
+                <ul>
+
+                    <li>Technical Proficiency: </li>
+
+                    <li>Adaptability and Flexibility: </li>
+                    <li>Effective Communication </li>
+
+
+                </ul>
+
+            </div>
+
+            <hr class="divider">
+            <div class="detail-btn">
+
+                <button class="btn-apply">Apply Now</button>
+
+                <button class="btn-save">Save Job</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="detail"  id="content4" onclick=fun()>
+
+        <ion-icon class="close-detail" name="close-detail"></ion-icon>
+
+        <div class="detail-header">
+
+            <img src="images/asus.jpg">
+
+            <h2>ASUS</h2>
+
+            <p>Data Science</p>
+        </div>
+        <hr class="divider">
+        <div class="detail-desc">
+
+            <div class="about">
+
+                <h4>About Company</h4>
+
+                <p>Renowned for its innovation in computing hardware, ASUS consistently delivers high-quality laptops, desktops, motherboards, and other peripherals, catering to diverse consumer and enterprise needs
+                    <a href="#">Read more</a>
+
+            </div>
+
+            <hr class="divider">
+
+            <div class="qualification">
+
+                <h4>Qualification</h4>
+
+                <ul>
+
+                    <li>Technical Proficiency: </li>
+
+                    <li>Adaptability and Flexibility: </li>
+                    <li>Effective Communication </li>
+
+                </ul>
+
+            </div>
+
+            <hr class="divider">
+            <div class="detail-btn">
+
+                <button class="btn-apply">Apply Now</button>
+
+                <button class="btn-save">Save Job</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="detail"  id="content5" onclick=fun()>
+
+        <ion-icon class="close-detail" name="close-detail"></ion-icon>
+
+        <div class="detail-header">
+
+            <img src="images/cisco.jpg">
+
+            <h2>CISCO</h2>
+
+            <p>Data Science</p>
+        </div>
+        <hr class="divider">
+        <div class="detail-desc">
+
+            <div class="about">
+
+                <h4>About Company</h4>
+
+                <p>A global leader in networking solutions, Cisco provides cutting-edge technology and services that enable seamless connectivity and communication, from networking hardware to cybersecurity solutions, driving digital transformation across industries.
+
+                    <a href="#">Read more</a>
+
+            </div>
+
+            <hr class="divider">
+
+            <div class="qualification">
+
+                <h4>Qualification</h4>
+
+                <ul>
+
+                    <li>Technical Proficiency: </li>
+
+                    <li>Adaptability and Flexibility: </li>
+                    <li>Effective Communication </li>
+
+                </ul>
+
+            </div>
+
+            <hr class="divider">
+            <div class="detail-btn">
+
+                <button class="btn-apply">Apply Now</button>
+
+                <button class="btn-save" onclick="saveJob()">Save Job</button>
+
+            </div>
+        </div>
+    </div>
+
+
+
+ 
+   
+<!-- saves the id of the pressed button on the local storage -->
+
+    <script>
+        function bookmarkJob(cardId) {
+            const bookmarkedCardIds = JSON.parse(localStorage.getItem("bookmarkedCardIds")) || [];
+    
+            const index = bookmarkedCardIds.indexOf(cardId);
+            if (index === -1) {
+                bookmarkedCardIds.push(cardId);
+            } else {
+                bookmarkedCardIds.splice(index, 1);
+            }
+    
+            localStorage.setItem("bookmarkedCardIds", JSON.stringify(bookmarkedCardIds));
+        }
+    </script>
+
+<script >
+     
+    function displayUserData() {
+      // Get user data from local storage
+      var userData = JSON.parse(localStorage.getItem('userData'));
+      console.log(userData)
+
+      // Display user data on the profile page
+      document.getElementById("txt").innerText = userData.firstName  ;
+      document.getElementById("email1").innerText = userData.email;
+  }
+  
+  window.onload = displayUserData;</script>
+
+ 
+</body>
+ 
+
+
+<script src="script.js"></script>
+
+</body>
+
+<!-- <script>
+    function saveJob() {
+        // Fetch job details from the current page (you need to implement this part)
+        const jobData = getJobDetails();
+
+        // Save the job details to the bookmarks (you need to implement this part)
+        saveToBookmarks(jobData);
+    }
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script
+type="module"
+src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+<script nomodule src="https://unpkg.com/ionicons5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+ 
+
+</html>
